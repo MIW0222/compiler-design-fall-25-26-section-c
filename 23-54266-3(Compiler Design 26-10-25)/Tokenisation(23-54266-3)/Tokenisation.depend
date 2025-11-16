@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1763282058 source:c:\users\student\desktop\new\tokenisation\checkid.cpp
+	<iostream>
+	<string>
+	<fstream>
+
+1763280984 source:c:\users\student\desktop\new\tokenisation\checkkey.cpp
+
+1763282058 source:c:\users\student\desktop\new\tokenisation\checkop.cpp
+	<iostream>
+	<string>
+	<fstream>
+
+1763281916 source:c:\users\student\desktop\new\tokenisation\checkpunc.cpp
+	<iostream>
+	<string>
+	<fstream>
+
+1763282073 source:c:\users\student\desktop\new\tokenisation\checkconst.cpp
+	<iostream>
+	<string>
+	<fstream>
+
+1763282078 source:c:\users\student\desktop\new\tokenisation\main.cpp
+	<iostream>
+	"checkPunc.h"
+
+1763282058 c:\users\student\desktop\new\tokenisation\checkpunc.h
+
