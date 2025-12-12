@@ -1,3 +1,8 @@
+#include<iostream>
+#include<string>
+#include<fstream>
+
 using namespace std;
 
-int checkIdA();
+bool isId(string c);
+int checkIdA(string filename);

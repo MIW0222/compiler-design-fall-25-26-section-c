@@ -1,16 +1,17 @@
 #include<iostream>
 #include<string>
 #include<fstream>
+#include "checkConst.h"
+
 using namespace std;
 
-bool isConst()
+bool isConst(string c)
 {
-    string c;
-    cout<<"Enter input: ";
-    cin>>c;
-    for(int i=0;i<c.length();i++)
+    if(c.empty()) return false;
+
+    for(int i=0; i < c.length(); i++)
     {
-        if(c[i]>47 && c[i]<58)
+        if(c[i] >= '0' && c[i] <= '9')
         {
             continue;
         }
@@ -22,16 +23,24 @@ bool isConst()
     return true;
 }
 
-int checkConstA()
+int checkConstA(string filename)
 {
-    bool num = isConst();
-    if(num)
+    ifstream inputFile(filename.c_str());
+    if (!inputFile)
     {
-        cout<<"It is a number"<<endl;
+        cout << "No file found." << endl;
+        return 1;
     }
-    else
-    {
-        cout<<"It is not a number"<<endl;
-    }
-}
 
+    string line;
+    while (getline(inputFile, line))
+    {
+        bool num = isConst(line);
+        if(num)
+        {
+            cout << "Constant: " << line<< endl;
+        }
+    }
+
+    return 0;
+}

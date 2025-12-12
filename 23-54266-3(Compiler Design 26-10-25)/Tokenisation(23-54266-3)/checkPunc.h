@@ -1,3 +1,8 @@
+#include<iostream>
+#include<string>
+#include<fstream>
+
 using namespace std;
 
-int checkPuncA();
+bool isPunc(string c);
+int checkPuncA(string filename);

@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 #include<fstream>
+#include "checkPunc.h"
 
 using namespace std;
 
@@ -27,9 +28,9 @@ bool isPunc(string c)
     return true;
 }
 
-int checkPuncA()
+int checkPuncA(string filename)
 {
-    ifstream inputFile("file.txt");
+    ifstream inputFile(filename.c_str());
     if (!inputFile)
     {
         cout << "No file found." << endl;
@@ -42,11 +43,7 @@ int checkPuncA()
         bool num = isPunc(c);
         if (num)
         {
-            cout << "Line: " << c << " -> It is a punctuation." << endl;
-        }
-        else
-        {
-            cout << "Line: " << c << " -> It is not a punctuation." << endl;
+            cout << "Punctuation: " << c << endl;
         }
     }
 

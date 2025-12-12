@@ -1,14 +1,13 @@
 #include<iostream>
 #include<string>
 #include<fstream>
+#include "checkOp.h"
+
 using namespace std;
 
-bool isOp()
+bool isOp(string c)
 {
     char op[6]={'+','-','*','/','%','='};
-    string c;
-    cout<<"Enter input: ";
-    cin>>c;
 
     bool foundOp = false;
 
@@ -26,10 +25,31 @@ bool isOp()
     return foundOp;
 }
 
-int checkOpA()
+int checkOpA(string filename)
 {
-    if(!isOp())
+    ifstream inputFile(filename.c_str());
+    if (!inputFile)
+    {
+        cout << "No file found." << endl;
+        return 1;
+    }
+
+    string c;
+    bool anyOpFound = false;
+
+    while (getline(inputFile, c))
+    {
+        bool hasOperator = isOp(c);
+        if (hasOperator)
         {
-            cout<<"No operators found."<<endl;
+            anyOpFound = true;
         }
+    }
+
+    if(!anyOpFound)
+    {
+        cout<<"No operators found."<<endl;
+    }
+
+    return 0;
 }
