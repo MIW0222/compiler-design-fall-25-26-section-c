@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1767414828 source:d:\users\wazed\documents\cg\rechecker\rechecker.cpp
+	<iostream>
+	<string>
+	"REchecker.h"
+
+1767414828 d:\users\wazed\documents\cg\rechecker\rechecker.h
+	<iostream>
+	<string>
+
+1767415072 source:d:\users\wazed\documents\cg\rechecker\main.cpp
+	<iostream>
+	<string>
+	"REchecker.h"
+
